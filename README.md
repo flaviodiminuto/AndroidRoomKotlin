@@ -17,6 +17,9 @@ Neste exemplo fora utilizada a seguinte configuração
     implementation "androidx.room:room-runtime:$room_version"
     kapt "androidx.room:room-compiler:$room_version"
 
+Adicione também no topo do mesmo arquivo 
+`apply plugin: 'kotlin-kapt'`
+
 Após inserir a dependencia aparecerá a opção para sincronizar as dependencias `syn now` no topo da janela, selecione esta opção e aguarde o processo de build. Se tudo der certo as notações necessárias estarão disponíveis para utilização.
 
 ### Atenção
@@ -77,3 +80,10 @@ O método `salvar` é ativo dentro método `onCreate` então toda vez que a acti
 [classe-database]: https://github.com/flaviodiminuto/AndroidRoomKotlin/blob/master/app/Prints/ClasseDatabase.PNG
 [add-dependenica]: https://github.com/flaviodiminuto/AndroidRoomKotlin/blob/master/app/Prints/ClasseDatabase.PNG
 [diretorios]: https://github.com/flaviodiminuto/AndroidRoomKotlin/blob/master/app/Prints/DiretorioDatabase.PNG
+
+
+### Referencias
+
+[Android Architecture Components com Kotlin: Persistindo dados com Room](https://medium.com/collabcode/android-archtecture-components-com-kotlin-persistindo-dados-com-room-f8c9eba58854)
+
+[Persistence Data in Kotlin](https://medium.com/@biratkirat/9-persistence-data-in-kotlin-a0998009a92a)
