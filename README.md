@@ -78,7 +78,7 @@ Em `getDatabase()` é utilizado o método `allowMainThreadQueries()`, esta prati
 O método `salvar` é ativo dentro método `onCreate` então toda vez que a activitie for redesenhada a função será executada e os dados da lista são reinseridos, inclusive quando viramos o aparelho de lado, já que ele redesenha a activitie em uma nova orientação.
 
 [classe-database]: https://github.com/flaviodiminuto/AndroidRoomKotlin/blob/master/app/Prints/ClasseDatabase.PNG
-[add-dependenica]: https://github.com/flaviodiminuto/AndroidRoomKotlin/blob/master/app/Prints/ClasseDatabase.PNG
+[add-dependenica]: https://github.com/flaviodiminuto/AndroidRoomKotlin/blob/master/app/Prints/Dependencia.PNG
 [diretorios]: https://github.com/flaviodiminuto/AndroidRoomKotlin/blob/master/app/Prints/DiretorioDatabase.PNG
 
 
