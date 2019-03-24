@@ -8,7 +8,9 @@ Primeiro passo é adicionar o Android Room ao seu projeto e para isso você pode
 https://developer.android.com/jetpack/androidx/releases/room
 
 Você precisa adicionar a implementação do Room em seu arquivo app na área `gradle script` do seu projeto.
-Neste exemplo utilizei a seguinte configuração
+![alt text][add-dependenica]
+
+Neste exemplo fora utilizada a seguinte configuração
 
  `def room_version = "2.1.0-alpha05"` 
 
@@ -20,11 +22,11 @@ Após inserir a dependencia aparecerá a opção para sincronizar as dependencia
 ### Atenção
 para projetos Kotlin utiliza-se o **kapt** no lugar do **annotationProcessor**
 
-
-
 ## 2 - Criando o banco de dados
 Para organização crie 3 diretórios para cada item que utilizaremos (database, dao e model)
 No diretório database crie a classe que representará o banco de dados, neste exemplo foi utilizada a classe `DatabaseKotlin`.
+
+![alt text][diretorios] 
 
 A classe deve conter antes de sua declaração a notação `@Database`que espera como argumentos uma array de entidades, a versão do banco o parametro `exportSchema` se omitido tem por padrão o valor **false**.
 
@@ -37,6 +39,8 @@ Ao indicar que uma classe é uma entidade deste banco de dados o android studio 
 ## 3 - Descrição da tabela (Entidade) Pessoa
 No diretório model deste exemplo está adicionada a classe `Pessoa` com os campos `id`, `idade`, `nome` e `profissão`.
 A classe pessoa precisa ter a notação `Entity` antes de sua declaração e o campo id recebe a notação `@PrimaryKey` pode ser adicionado a função de auto incrementar adicionando o parâmetro `(autoGenerate = true)`.
+
+![alt text][classe-database]
 
 ### Atenção
 O Android Room precisa que sua classe de entidade possua um construtor vazio, os demais contrutores precisam receber a notação `@Ignore` antes de sua declaração.
@@ -70,4 +74,6 @@ Em `getDatabase()` é utilizado o método `allowMainThreadQueries()`, esta prati
 ### Observação final
 O método `salvar` é ativo dentro método `onCreate` então toda vez que a activitie for redesenhada a função será executada e os dados da lista são reinseridos, inclusive quando viramos o aparelho de lado, já que ele redesenha a activitie em uma nova orientação.
 
-
+[classe-database]: https://github.com/flaviodiminuto/AndroidRoomKotlin/blob/master/app/Prints/ClasseDatabase.PNG
+[add-dependenica]: https://github.com/flaviodiminuto/AndroidRoomKotlin/blob/master/app/Prints/ClasseDatabase.PNG
+[diretorios]: https://github.com/flaviodiminuto/AndroidRoomKotlin/blob/master/app/Prints/DiretorioDatabase.PNG
