@@ -18,7 +18,7 @@ Neste exemplo fora utilizada a seguinte configuração
     kapt "androidx.room:room-compiler:$room_version"
 
 Adicione também no topo do mesmo arquivo 
-`apply plugin: 'kotlin-kapt'`
+`apply plugin: 'kotlin-kapt'`(Esta etapa não é necessária em projeto java)
 
 Após inserir a dependencia aparecerá a opção para sincronizar as dependencias `syn now` no topo da janela, selecione esta opção e aguarde o processo de build. Se tudo der certo as notações necessárias estarão disponíveis para utilização.
 
