@@ -62,6 +62,8 @@ Também são utilizados os seguintes métodos:
 - `getDatabase` Que retorna uma instancia do `DatabaseKotlin` para acessarmos as informações do banco
 - `listarTodos` Que retorna uma `String` com informações formatadas de todos os registros salvos de pessoas
 
+Neste exemplo somente é salva a lista de objetos do tipo `Pessoa` em seguida é impressa a lista com todos os registros salvos no banco.
+
 ### Atenção
 Em `getDatabase()` é utilizado o método `allowMainThreadQueries()`, esta pratica não é recomendada devido a possibilidade de sobrecarga que a manipulação de grandes volumes de dados podem ocasionar no aparelho.
 
